@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'bookings/new'
+
+  get 'bookings/create'
+
+  get 'bookings/edit'
+
+  get 'bookings/update'
+
+  get 'bookings/show'
+
+  get 'bookings/review'
+
   resources :dolls
   devise_for :users
   root to: 'pages#home'
