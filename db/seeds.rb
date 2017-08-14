@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+# pour github
 
 Doll.create(name: "Lila", user_id: 1, price: 120, description: "Lila ravissante poupée réaliste love sex doll de taille réelle avec une poitrine bonnet E, elle mesure 158 cm  pour 33 kg et, est entièrement personnalisable.")
 Doll.create(name: "Carla", user_id: 1, price: 120, description: "Carla ravissante poupée réaliste love sex doll de taille réelle avec une poitrine bonnet E, elle mesure 158 cm  pour 33 kg et, est entièrement personnalisable.")
