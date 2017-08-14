@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  resources :dolls
-  devise_for :users
   root to: 'dolls#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  devise_for :users
+  
+  resources :dolls do
+    resources :bookings, only: [:new, :create, :edit, :update, :show]
+  end
+
 end
+
+
+
+
