@@ -1,2 +1,11 @@
-<h1>Dolls#show</h1>
-<p>Find me in app/views/dolls/show.html.erb</p>
+<h1 class="text-center">Dolls#show</h1>
+
+<div class="container">
+  <div class="card">
+  <%= link_to "",  %>
+  <%= doll.name%>
+  <%= doll.description%>
+  <%= doll.price %>
+  <%= link_to "Book a Doll",doll_booking(:doll_id), class: "btn btn-success"%>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 class DollsController < ApplicationController
+  before_action :find_doll, only:[:show]
+
   def index
   end
 
@@ -19,4 +21,15 @@ class DollsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def find_doll
+    @doll = Doll.find(params[:id])
+  end
+
+  def doll_params
+    params.require(:doll).permit(:name, :description, :price)
+  end
+end
 end
