@@ -5,11 +5,9 @@
   <div class="row">
     <% @dolls.each do |doll| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card text-center">
-            <div class="card-header" style="background-image: url('<%= image_path  "doll1.jpg" %>')">
-            <p><%= @doll.price %></p>
-            </div>
+        <div class="card text-center" style="background-image: url('<%= image_path "doll#{doll.id}.jpg" %>')">
         </div>
+        <p><%= doll.price %></p>
         <div class="card-body">
           <%= link_to doll.name, doll_path(doll) %>
         </div>
