@@ -6,16 +6,16 @@
     <% @dolls.each do |doll| %>
       <div class="col-xs-12 col-sm-4">
         <div class="card text-center">
-            <div class="card-header" style="background-image: url('<%= image_path doll.picture%>')">
-            <p> @doll.price </p>
+            <div class="card-header" style="background-image: url('<%= image_path  "doll1.jpg" %>')">
+            <p><%= @doll.price %></p>
             </div>
-                    </div>
-          <% end %>
-          <div class="card-body">
-            <%= link_to doll.name, doll_path(doll) %>
-          </div>
+        </div>
+        <div class="card-body">
+          <%= link_to doll.name, doll_path(doll) %>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
+
