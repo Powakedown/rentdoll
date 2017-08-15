@@ -34,4 +34,3 @@ class DollsController < ApplicationController
     params.require(:doll).permit(:name, :description, :price)
   end
 end
-end
