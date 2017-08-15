@@ -1,0 +1,38 @@
+.container{
+  margin: 0 auto;
+  width: 900px;
+  height:900px;
+  padding: 0px;
+}
+
+.card {
+  height: 400px;
+  width: 900px;
+  background-color: white;
+  background-position: center;
+  color: gray;
+  position: relative;
+  border-radius:3px;
+  box-shadow: 1px 1px 3px #F5F5F5
+}
+
+.image{
+  height: 300px;
+  width: 250px;
+  background-size: cover;
+
+.description{
+  height: 300px;
+  width: 200px;
+}
+
+}
+.h3{
+  padding: 10px;
+}
+.price{
+  padding: 15px;
+}
+.text-center{
+   padding: 60px;
+}

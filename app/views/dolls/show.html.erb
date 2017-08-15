@@ -1,12 +1,23 @@
-<h1 class="text-center">Dolls#show</h1>
+<h1 class="text-center">Doll Profil</h1>
 
 <div class="container">
+
   <div class="card">
-  <!-- add images link-->
-  <!--<%= link_to ,  %>-->
-  <%= @doll.name%>
-  <%= @doll.description%>
-  <%= @doll.price %>
-  <%= link_to "Book a Doll",doll_booking(:doll_id), class: "btn btn-success"%>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="image" style="background-image: url(<%= asset_path "doll#{@doll.id}.jpg" %>);">
+          </div>
+        </div>
+        <div class="col-xs-6 ">
+          <div class="description">
+            <h3><%= @doll.name%></h3>
+            <h4><%= @doll.description%></h4>
+            <h4 class="price text-right"><%= @doll.price %> $</h4>
+            <%= link_to "Louer","#", class: "btn btn-success" %>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
+
+
