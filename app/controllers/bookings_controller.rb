@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
-    @doll = @doll = Doll.find(params[:id])
+    @doll = Doll.find(params[:id])
     @user = User.find(params[:id])
   end
 
