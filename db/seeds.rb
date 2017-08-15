@@ -42,12 +42,12 @@ Doll.create(
 Avec un poids de 25 kg pour 148cm elle est facile à déplacer et à ranger.",
   photo: "http://res.cloudinary.com/doodlid/image/upload/v1502810433/doll9_jsh6w6.jpg")
 Doll.create(
-  name: "Karine",
+  name: "Bradley",
   user_id: 5,
   price: 130,
-  description: "Franky, sublime love sexdoll de 148 cm entièrement personnalisable.
-Avec un poids de 25 kg pour 148cm elle est facile à déplacer et à ranger.",
-  photo: "http://res.cloudinary.com/doodlid/image/upload/v1502810433/doll10_yncjbf.jpg")
+  description: "Bradley, sublime love sexdoll de 148 cm entièrement personnalisable.
+Avec un poids de 25 kg pour 148cm, il est facile à déplacer et à ranger.",
+  photo: "http://res.cloudinary.com/doodlid/image/upload/v1502810433/doll10.jpg")
 Doll.create(
   name: "Bridget",
   user_id: 6,
@@ -55,10 +55,10 @@ Doll.create(
   description: "Bridget ravissante poupée réaliste love sex doll de taille réelle avec une poitrine bonnet E, elle mesure 158 cm  pour 33 kg et, est entièrement personnalisable.",
   photo: "http://res.cloudinary.com/doodlid/image/upload/v1502810433/doll5_eroshy.jpg")
 Doll.create(
-  name: "Bradley",
+  name: "Calice",
   user_id: 1,
   price: 150,
-  description: "Bradley bel homme synthétique réaliste, love sex doll de taille réelle, il mesure 158 cm  pour 33 kg et, est entièrement personnalisable.",
+  description: "Calice belle poupée synthétique réaliste, love sex doll de taille réelle, il mesure 158 cm  pour 33 kg et, est entièrement personnalisable.",
   photo: "http://res.cloudinary.com/doodlid/image/upload/v1502810433/doll8_msmtic.jpg")
 Doll.create(
   name: "Lorna",
