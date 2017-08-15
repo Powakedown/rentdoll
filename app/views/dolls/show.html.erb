@@ -1,2 +1,25 @@
-<h1>Dolls#show</h1>
-<p>Find me in app/views/dolls/show.html.erb</p>
+<h1 class="text-center"><%= @doll.name%></h1>
+<div class="container">
+
+  <div class="card">
+      <div class="row">
+
+        <div class="col-xs-6">
+          <div class="card-content">
+            <div class="card-image" style=" background-image: url(<%= asset_path "doll#{@doll.id}.jpg" %>);">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 ">
+          <div class="card-content">
+            <p class="doll_description"><%= @doll.description%></p>
+            <p class="text-right price"><%= @doll.price %> €</p>
+            <%= render "bookings/form", doll: @doll, booking: @booking %>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
