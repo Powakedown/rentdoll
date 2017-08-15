@@ -7,9 +7,9 @@
       <div class="col-xs-12 col-sm-4">
         <div class="card text-center" style="background-image: url('<%= image_path "doll#{doll.id}.jpg" %>')">
         </div>
-        <p><%= doll.price %></p>
-        <div class="card-body">
-          <%= link_to doll.name, doll_path(doll) %>
+
+        <div class="card-body text-center"><p><%= doll.price %> euros</p>
+         <p> <%= link_to doll.name, doll_path(doll) %></p>
         </div>
       </div>
     <% end %>
