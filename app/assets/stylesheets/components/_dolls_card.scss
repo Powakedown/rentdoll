@@ -1,0 +1,48 @@
+.container{
+  margin: 0 auto;
+  width: 900px;
+  height:900px;
+  padding: 0px;
+}
+
+.card {
+  height: 440px;
+  width: 900px;
+  background-color: white;
+  color: gray;
+  position: relative;
+  border-radius:3px;
+  box-shadow: 2px 2px 5px #B3B3B3
+}
+.card-content{
+  height: 440px;
+  width: 435px;
+  padding: 20px;
+
+}
+.card-image{
+  height: 400px;
+  width: 300px;
+  background-size: cover;
+  padding: 20px;
+  margin: auto;
+
+}
+.doll_description{
+  margin-top: 70px;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+.doll_name{
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.price{
+  font-size: 32px;
+}
+.btn{
+  margin-top:30px;
+}
+
+
+
