@@ -1,15 +1,15 @@
-<h1 class="text-center">Dolls</h1>
-
-
 <div class="container">
   <div class="row">
     <% @dolls.each do |doll| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card text-center" style="background-image: url('<%= image_path "doll#{doll.id}.jpg" %>')">
-        </div>
-        <p><%= doll.price %></p>
-        <div class="card-body">
-          <%= link_to doll.name, doll_path(doll) %>
+      <div class="col-xs-12 col-md-3 col-sm-4 text-center" >
+        <div class="card-index">
+          <%= link_to doll_path(doll) do %>
+          <div class="card-index-image" style="background-image: url('<%= image_path doll.photo %>')">
+          </div>
+          <% end %>
+          <div class="card-body text-center"><p><%= link_to doll.name, doll_path(doll) %> - <%= doll.price %> €</p>
+          <p class="description"> <%= doll.description.byteslice(0..50) %>...</p>
+          </div>
         </div>
       </div>
     <% end %>

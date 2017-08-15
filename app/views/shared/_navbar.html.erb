@@ -1,8 +1,9 @@
 <div class="navbar-wagon">
-  <!-- Logo -->
+  <div class="navbar-logo">
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <span><i class="fa fa-diamond" aria-hidden="true"></i> RentDoll</span>
   <% end %>
-
+  </div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <% if user_signed_in? %>
