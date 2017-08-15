@@ -1,5 +1,7 @@
 class DollsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :index]
+  before_action :find_doll, only:[:show]
+  skip_before_action :authenticate_user!, only: [:home, :index, :show]
+
   def index
     @dolls = Doll.all
   end
@@ -21,4 +23,15 @@ class DollsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def find_doll
+    @doll = Doll.find(params[:id])
+  end
+
+  def doll_params
+    params.require(:doll).permit(:name, :description, :price)
+  end
+end
 end
