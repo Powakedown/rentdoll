@@ -15,10 +15,9 @@
           <div class="card-content">
             <p class="doll_description"><%= @doll.description%></p>
             <p class="text-right price"><%= @doll.price %> €</p>
-            <%= link_to "Louer","#", class: "btn btn-success text-left  btn-lg" %>
+            <%= render "bookings/form", doll: @doll, booking: @booking %>
           </div>
         </div>
-
       </div>
   </div>
 </div>
