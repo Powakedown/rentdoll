@@ -47,7 +47,7 @@ Doll.create(
   price: 130,
   description: "Bradley, sublime love sexdoll de 148 cm entièrement personnalisable.
 Avec un poids de 25 kg pour 148cm, il est facile à déplacer et à ranger.",
-  photo: "http://res.cloudinary.com/doodlid/image/upload/v1502810433/doll10.jpg")
+  photo: "http://res.cloudinary.com/doodlid/image/upload/v1502810433/doll15.jpg")
 Doll.create(
   name: "Bridget",
   user_id: 6,
