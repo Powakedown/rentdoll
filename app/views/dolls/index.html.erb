@@ -3,7 +3,7 @@
     <% @dolls.each do |doll| %>
       <div class="col-xs-12 col-md-3 col-sm-4">
         <%= link_to doll_path(doll) do %>
-         <div class="card text-center" style="background-image: url('<%= image_path "doll#{doll.id}.jpg" %>')">
+         <div class="card text-center" style="background-image: url('<%= image_path doll.photo %>')">
          </div>
         <% end %>
         <div class="card-body text-center"><p><%= link_to doll.name, doll_path(doll) %> - <%= doll.price %> €</p>
