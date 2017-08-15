@@ -1,7 +1,9 @@
 class DollsController < ApplicationController
   before_action :find_doll, only:[:show]
+  skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
+    @dolls = Doll.all
   end
 
   def new
