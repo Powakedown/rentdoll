@@ -1,8 +1,6 @@
 // Import your components CSS files here.
 @import "alert";
 @import "navbar";
-@import "row";
 @import "card";
-@import "body";
-@import "dolls_card";
-
+@import "_dolls_card";
+@import "form";
