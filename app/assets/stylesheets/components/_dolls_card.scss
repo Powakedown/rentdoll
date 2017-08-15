@@ -27,10 +27,10 @@
   padding: 20px;
   margin: auto;
 
+
 }
 .doll_description{
-  margin-top: 70px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 20px;
 }
 .doll_name{
@@ -39,6 +39,9 @@
 }
 .price{
   font-size: 32px;
+  color: $pink;
+  letter-spacing: -1px;
+  margin-bottom: 0px;
 }
 .btn{
   margin-top:30px;
