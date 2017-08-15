@@ -1,25 +1,18 @@
-<h1 class="text-center"><%= @doll.name%></h1>
-<div class="container">
-
-  <div class="card">
-      <div class="row">
-
-        <div class="col-xs-6 " style="padding-left: 15px">
-          <div class="card-content">
-            <div class="card-image" style=" background-image: url(<%= asset_path @doll.photo %>);">
+<div class="content" style="background-image: url(<%= asset_path @doll.photo %>);"">
+  <div class="container-fluid"">
+    <div class="card">
+        <div class="row">
+          <div class="col-md-offset-6 col-xs-6">
+            <div class="card-content text-left">
+              <h1><%= @doll.name%></h1>
+              <p class="doll_description"><%= @doll.description%></p>
+              <p>Location de 19H à midi. Nettoyer avant restitution.</p>
+              <p class="text-right price"><%= @doll.price %> €</p>
+              <%= render "bookings/form", doll: @doll, booking: @booking %>
             </div>
           </div>
         </div>
-
-        <div class="col-xs-6 ">
-          <div class="card-content">
-            <p class="doll_description"><%= @doll.description%></p>
-            <p>Location de 19H à midi. Nettoyer avant restitution.</p>
-            <p class="text-right price"><%= @doll.price %> €</p>
-            <%= render "bookings/form", doll: @doll, booking: @booking %>
-          </div>
-        </div>
-      </div>
+    </div>
   </div>
 </div>
 
