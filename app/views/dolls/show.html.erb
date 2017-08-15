@@ -2,11 +2,10 @@
 
 <div class="container">
   <div class="card">
-  <!-- add images link-->
-  <!--<%= link_to ,  %>-->
   <%= @doll.name%>
   <%= @doll.description%>
   <%= @doll.price %>
-  <%= link_to "Book a Doll",doll_booking(:doll_id), class: "btn btn-success"%>
+  <%= render "bookings/form", doll: @doll, booking: @booking %>
+
   </div>
 </div>

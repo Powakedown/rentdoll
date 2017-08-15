@@ -19,6 +19,7 @@ class DollsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
   end
 
   def destroy
