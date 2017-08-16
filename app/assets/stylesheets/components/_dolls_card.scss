@@ -1,35 +1,29 @@
-.container{
-  margin: 0 auto;
-  width: 900px;
-  height:900px;
-  padding: 0px;
-  color:#333333;
-}
-
+// .content {
+//   height: 1000px;
+//   // background-color: red;
+// }
 .card {
-  height: 440px;
-  width: 900px;
-  background-color: white;
+  height: 1000px;
   color: gray;
   position: relative;
-  border-radius:3px;
-  box-shadow: 2px 2px 5px #B3B3B3
 }
 .card-content{
   color:#333333;
   height: 440px;
   width: 435px;
   padding: 20px;
-
+  background-color: white;
 }
 .card-image{
-  height: 400px;
-  width: 350px;
+  width: 100%;
+  height: 1000px;
   background-size: cover;
-  padding: 20px;
-  margin: auto;
-
-
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-right: -15px;
+}
+.padding-0 {
+  padding: 0px !important;
 }
 .doll_description{
   margin-bottom: 20px;
@@ -48,6 +42,19 @@
 .btn{
   margin-top:30px;
 }
-
+.btn-booking {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: medium;
+  background: $pink;
+  transition: background 0.3s ease;
+}
+.btn-booking:hover {
+  opacity: 1;
+  background: #FF0080;
+  text-decoration: none;
+  color: white;
+}
 
 
