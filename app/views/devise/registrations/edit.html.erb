@@ -1,27 +1,71 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="card-profile">
+        <h2>Votre profil</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+          <div class="form-inputs">
+            <%= f.input :email, required: true, autofocus: true %>
+            <%= f.input :address %>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+            <% end %>
 
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+            <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+            <%= f.input :password_confirmation, required: false %>
+            <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+          </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <div class="card-profile card-profile-activity">
+        <div class="buttons">
+          <%= link_to new_doll_path(@user) do %>
+            <i class="fa fa-plus"></i>
+            <span>Ajouter une doll en location</span>
+          <% end %>
+        </div>
+
+
+        <h5>Vous avez  <%= @user.dolls.count %> dolls en location:</h5>
+
+        <ul class="list-group">
+          <% @user.dolls.each do |dolie| %>
+            <% if dolie.persisted? %>
+              <li class="list-group-item profil-doll-image" style="background-image: linear-gradient(-225deg, rgba(50,0,20,0.2) 0%, rgba(50,0,20,0.2) 50%), url('<%= image_path dolie.photo %>')"">
+                  <div class="profil-doll">
+                    <div class="">
+                     <h3><%= dolie.name %></h3>
+                      <%= link_to doll_path(dolie), method: :delete do %>
+                        <i class="fa fa-trash align-right"></i>
+                      <% end %>
+                    </div>
+                    <div class="">
+                      <%= dolie.description %>
+                    </div>
+                  </div>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+    <div class="row">
+      <div class="col-xs-12">
+                <div class="form-actions">
+            <%= f.button :submit, "Update", class: "btn-booking" %>
+          </div>
+        <% end %>
+        <div class="card-profile-cancel">
+            <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+            <%= link_to "Back", :back %>
+        </div>
+      </div>
+    </div>
+</div>

@@ -39,16 +39,15 @@
   letter-spacing: -1px;
   margin-bottom: 0px;
 }
-.btn{
-  margin-top:30px;
-}
 .btn-booking {
+  margin-top:30px;
   color: white;
   padding: 10px 15px;
   border-radius: 6px;
   font-weight: medium;
   background: $pink;
   transition: background 0.3s ease;
+  min-width: 200px;
 }
 .btn-booking:hover {
   opacity: 1;
