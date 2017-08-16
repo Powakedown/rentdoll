@@ -1,11 +1,14 @@
 // Specific CSS for your home-page
 body {
- background-color: white;
+  background-color: white;
 }
-
+.navbar-content-companion {
+ height: 70px;
+ // border: 2px solid pink;
+}
 a {
- color: #544B4A;
- font-weight: bold;
+  color: #544B4A;
+  font-weight: bold;
 }
 
 a:hover {
