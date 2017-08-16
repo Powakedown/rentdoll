@@ -16,8 +16,13 @@
     <p class="alert"><%= alert %></p> -->
     <div class="navbar-content-companion">$
     </div>
+
       <%= render 'shared/flashes' %>
+
       <%= yield %>
+
+      <%= render 'shared/footer' %>
+
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
