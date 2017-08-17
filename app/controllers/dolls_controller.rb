@@ -37,7 +37,6 @@ class DollsController < ApplicationController
 
   def show
     @booking = Booking.new
-    @user = User.find(current_user.id)
   end
 
   def destroy
