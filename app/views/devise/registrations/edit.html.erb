@@ -30,7 +30,7 @@
           <% end %>
         </div>
 
-        <h5>Vous avez  <%= @user.dolls.count %> dolls en location:</h5>
+        <h5>Vous avez <strong><%= @user.dolls.count %></strong> dolls en location:</h5>
 
         <ul class="list-group">
           <% @user.dolls.each do |dolie| %>
@@ -41,6 +41,9 @@
                      <h3><%= dolie.name %></h3>
                       <%= link_to doll_path(dolie), method: :delete do %>
                         <i class="fa fa-trash align-right"></i>
+                      <% end %>
+                      <%= link_to edit_doll_path(dolie) do %>
+                        <i class="fa fa-pencil align-right"></i>
                       <% end %>
                     </div>
                     <div class="">
