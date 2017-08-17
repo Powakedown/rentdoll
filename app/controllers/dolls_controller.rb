@@ -52,6 +52,6 @@ class DollsController < ApplicationController
   end
 
   def params_doll
-    params.require(:doll).permit(:name, :description, :price, :user_id, :photo[] )
+    params.require(:doll).permit(:name, :description, :price, :user_id, :photo_cache, :photo[] )
   end
 end
