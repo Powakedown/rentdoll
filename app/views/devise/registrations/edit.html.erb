@@ -35,7 +35,6 @@
 
         <ul class="list-group">
           <% @user.dolls.each do |dolie| %>
-          <%= raise %>
             <% if dolie.persisted? %>
               <li class="list-group-item profil-doll-image" style="background-image: linear-gradient(-225deg, rgba(50,0,20,0.2) 0%, rgba(50,0,20,0.2) 50%), url('<%= image_path dolie.photo %>')"">
                   <div class="profil-doll">
