@@ -6,11 +6,9 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :dolls, shallow: true do
-      resources :bookings, only: [:new, :create, :edit, :update, :show]
+        resources :bookings, shallow: true
     end
   end
-
-
 
 end
 
