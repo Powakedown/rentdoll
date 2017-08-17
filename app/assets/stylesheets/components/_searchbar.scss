@@ -23,7 +23,6 @@
 
     .search-query:focus + button {
         z-index: 3;
-
     }
 
     .fake-input{
@@ -52,4 +51,9 @@ span {
   margin-top: 5px;
   margin-right: -15px;
   border-radius: 6px;
+  color: white;
+}
+
+.btn-pink{
+  background-color: $pink;
 }
