@@ -4,7 +4,11 @@
     <div class="card">
         <div class="row">
           <div class="col-xs-12 col-md-6 padding-0">
-            <div class="card-image" style="background-image: url(<%= asset_path @doll.photo %>);"">
+            <% if @doll.photo? %>
+              <div class="card-image" style="background-image: url('<%= asset_path @doll.photo %>');">
+            <%= else %>
+              <div class="card-image" style="background-image: url('http://res.cloudinary.com/doodlid/image/upload/e_blur:1337/v1502810434/doll8_msmtic.jpg')">
+            <%= end %>
             </div>
           </div>
           <div class="col-xs-12 col-md-6">
