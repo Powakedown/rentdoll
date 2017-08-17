@@ -7,9 +7,19 @@ class DollsController < ApplicationController
   end
 
   def new
+    @user = User.find(params[:user_id])
+    @doll = Doll.new
   end
 
   def create
+    @user = User.find(params[:user_id])
+    @doll = Doll.new(params_doll)
+    @doll.user_id = @user.id
+    if @doll.save
+      redirect_to edit_user_registration_path(@user)
+    else
+      render :new
+    end
   end
 
   def update
@@ -34,7 +44,7 @@ class DollsController < ApplicationController
     @doll = Doll.find(params[:id])
   end
 
-  def doll_params
-    params.require(:doll).permit(:name, :description, :price)
+  def params_doll
+    params.require(:doll).permit(:name, :description, :photo, :price, :user_id)
   end
 end

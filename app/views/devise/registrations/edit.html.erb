@@ -24,7 +24,7 @@
     <div class="col-xs-12 col-sm-6">
       <div class="card-profile card-profile-activity">
         <div class="buttons">
-          <%= link_to new_doll_path(@user) do %>
+          <%= link_to new_user_doll_path(@user) do %>
             <i class="fa fa-plus"></i>
             <span>Ajouter une doll en location</span>
           <% end %>
@@ -35,6 +35,7 @@
 
         <ul class="list-group">
           <% @user.dolls.each do |dolie| %>
+          <%= raise %>
             <% if dolie.persisted? %>
               <li class="list-group-item profil-doll-image" style="background-image: linear-gradient(-225deg, rgba(50,0,20,0.2) 0%, rgba(50,0,20,0.2) 50%), url('<%= image_path dolie.photo %>')"">
                   <div class="profil-doll">
