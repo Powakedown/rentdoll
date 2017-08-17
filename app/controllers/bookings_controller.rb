@@ -6,13 +6,12 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
-    @booking.user_id = current_user.id
     @doll = Doll.find(params[:doll_id])
-    @booking.doll_id = params[:doll_id]
+    @booking = @doll.bookings.new(booking_params)
+    @booking.user = current_user
     if @booking.save
-      render 'dolls/show'
       flash[:notice] = "Vous avez réservé avec succés #{@doll.name} pour le #{@booking.book_at}."
+      render 'dolls/show'
     else
       render 'dolls/show'
     end
