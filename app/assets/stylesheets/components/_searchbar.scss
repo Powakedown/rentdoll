@@ -48,9 +48,10 @@
   margin-top: 35px;
   border-radius: 8px;
   height: 70px;
-  input {
-    width: 85%;
+  input, input:focus, input:hover, textarea:focus, textarea:hover {
+    width: 88%;
     border: none;
+    outline: none !important;
   }
 }
 
