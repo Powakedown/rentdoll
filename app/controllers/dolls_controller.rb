@@ -1,5 +1,5 @@
 class DollsController < ApplicationController
-  before_action :find_doll, only:[:show]
+  before_action :find_doll, only:[:show, :destroy]
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
@@ -23,6 +23,9 @@ class DollsController < ApplicationController
   end
 
   def destroy
+    @user = @doll.user
+    @doll.destroy
+    redirect_to edit_user_registration_path(@user)
   end
 
   private
