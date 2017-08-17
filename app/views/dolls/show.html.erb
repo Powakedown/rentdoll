@@ -13,7 +13,7 @@
               <p class="doll_description"><%= @doll.description%></p>
               <p>Location de 19H à midi. Nettoyer avant restitution.</p>
               <p class="text-right price"><%= @doll.price %> €</p>
-              <%= render "bookings/form", user: @user, doll: @doll, booking: @booking %>
+              <%= render "bookings/form", doll: @doll, booking: @booking %>
             </div>
           </div>
         </div>

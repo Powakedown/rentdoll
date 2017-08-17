@@ -1,5 +1,5 @@
 class DollsController < ApplicationController
-  before_action :find_doll, only:[:show, :destroy]
+  before_action :find_doll, only:[:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
@@ -14,7 +14,7 @@ class DollsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @doll = Doll.new(params_doll)
-    @doll.user_id = @user.id
+    @doll.user = @user
     if @doll.save
       redirect_to edit_user_registration_path(@user)
     else
@@ -22,10 +22,17 @@ class DollsController < ApplicationController
     end
   end
 
-  def update
+  def edit
   end
 
-  def edit
+  def update
+    @user = current_user
+    @doll.update(params_doll)
+    if @doll.save
+      redirect_to edit_user_registration_path(@user)
+    else
+      render :edit
+    end
   end
 
   def show
