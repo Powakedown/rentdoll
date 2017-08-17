@@ -1,6 +1,24 @@
 <% provide(:title, "Rentdoll") %>
 <div class="container">
   <div class="row">
+    <div class="col-md-12">
+      <div class="fake-input">
+        <input placeholder="Doll" />
+          <button class="btn btn-danger" type="button">
+                <span> Rechercher</span>
+          </button>
+      </div>
+      <!-- <div id="custom-search-input">
+       <div class="input-group">
+         <input type="text" class="search-query form-control" placeholder="Doll" />
+          <span class="input-group-btn">
+            <button class="btn btn-danger" type="button">
+              <span class=" btn btn-danger"  id="button"> Rechercher</span>
+            </button>
+          </span>
+        </div>
+      </div> -->
+    </div>
     <% @dolls.each do |doll| %>
       <div class="col-xs-12 col-md-3 col-sm-4 text-center" >
         <div class="card-index">
