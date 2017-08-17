@@ -30,7 +30,7 @@
           <% end %>
         </div>
 
-        <h5>Vous avez <strong><%= @user.dolls.count %></strong> dolls en location:</h5>
+        <h5>Vous avez <strong><%= @user.dolls.count %></strong> doll<%= "s" if @user.dolls.count>1 %> en location:</h5>
 
         <ul class="list-group">
           <% @user.dolls.each do |dolie| %>
@@ -48,6 +48,9 @@
                     </div>
                     <div class="">
                       <%= dolie.description %>
+                    </div>
+                    <div class="">
+                      <h4><%= dolie.price %>€</h4>
                     </div>
                   </div>
               </li>
