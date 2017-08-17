@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @doll = Doll.find(params[:doll_id])
     @booking.doll_id = params[:doll_id]
     if @booking.save
-      render 'dolls/show'
+      redirect_to edit_user_registration_path
       flash[:notice] = "Vous avez réservé avec succés #{@doll.name} pour le #{@booking.book_at}."
     else
       render 'dolls/show'
