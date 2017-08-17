@@ -59,7 +59,7 @@ Doll.create(
   user_id: 1,
   price: 150,
   description: "Calice belle poupée synthétique réaliste, love sex doll de taille réelle, il mesure 158 cm  pour 33 kg et, est entièrement personnalisable.",
-  photo: "https://res.cloudinary.com/drua6zxss/image/upload/v1502882097/new_doll_05_g5u346.jpg")
+  photo: "https://res.cloudinary.com/drua6zxss/image/upload/c_scale,w_400/v1502896078/new_doll_05_g5u346.jpg")
 Doll.create(
   name: "Lorna",
   user_id: 2,
@@ -77,7 +77,7 @@ Doll.create(
   user_id: 4,
   price: 110,
   description: "Nalah ravissante poupée réaliste love sex doll de taille réelle avec une poitrine bonnet E, elle mesure 158 cm  pour 33 kg et, est entièrement personnalisable.",
-  photo: "https://res.cloudinary.com/drua6zxss/image/upload/c_scale,w_400/v1502882102/new_doll_07_trb9ys.jpg")
+  photo: "https://res.cloudinary.com/drua6zxss/image/upload/c_scale,w_400/v1502896405/new_doll_07_trb9ys.jpg")
 Doll.create(
   name: "Aurore",
   user_id: 5,
