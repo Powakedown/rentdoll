@@ -80,9 +80,10 @@
 }
 
 .navbar-logo {
-  font-family: 'Share', cursive;
-  font-size: 40px;
     a, a:hover {
-    color: white;
+    color: $pink;
   }
+    i{
+      font-size: 180%;
+    }
 }
