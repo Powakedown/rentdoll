@@ -17,10 +17,10 @@
       </div>
       <div class="form-group">
 
-        <label class="custom-file">
-          <%= f.input :photo, label: 'Charger une photo', :label_html => { :class => 'doll-name' }, :input_html => { :class => 'custom-file-input' }, error: 'Veuillez charger une photo' %>
-          <span class="custom-file-control"></span>
-        </label>
+      <label class="custom-file">
+        <%= f.input :photo, label: 'Charger une photo', as: :attachinary, :label_html => { :class => 'form-control-label' }, :input_html => { :class => 'custom-file-input' } %>
+        <span class="custom-file-control"></span>
+      </label>
 
       </div>
       <%= f.button :submit, class: 'btn btn-primary' %>
