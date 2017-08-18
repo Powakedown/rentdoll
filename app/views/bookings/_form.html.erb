@@ -1,6 +1,6 @@
 <%= simple_form_for booking, url: doll_bookings_path(doll), method: :post do |f| %>
   <%= f.input :book_at, label: 'Date de la location:', :label_html => { :class => 'form-control-label' }, :input_html => { :class => 'form-control' }, error: 'La date est obligatoire, merci d\'en préciser une' %>
-  <%= f.button :submit, class: "btn-booking" %>
+  <%= f.button :submit, value: "Réserver", class: "btn-booking" %>
 <% end %>
 
 
