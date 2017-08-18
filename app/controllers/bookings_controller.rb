@@ -10,8 +10,8 @@ class BookingsController < ApplicationController
     @booking = @doll.bookings.new(booking_params)
     @booking.user = current_user
     if @booking.save
+      redirect_to edit_user_resitration_path
       flash[:notice] = "Vous avez réservé avec succés #{@doll.name} pour le #{@booking.book_at}."
-      render 'dolls/show'
     else
       render 'dolls/show'
     end
