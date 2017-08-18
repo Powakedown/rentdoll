@@ -1,5 +1,5 @@
 class DollsController < ApplicationController
-  before_action :find_doll, only:[:show, :destroy]
+  before_action :find_doll, only:[:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
@@ -7,15 +7,32 @@ class DollsController < ApplicationController
   end
 
   def new
+    @user = User.find(params[:user_id])
+    @doll = Doll.new
   end
 
   def create
-  end
-
-  def update
+    @user = User.find(params[:user_id])
+    @doll = Doll.new(params_doll)
+    @doll.user = @user
+    if @doll.save
+      redirect_to edit_user_registration_path(@user)
+    else
+      render :new
+    end
   end
 
   def edit
+  end
+
+  def update
+    @user = current_user
+    @doll.update(params_doll)
+    if @doll.save
+      redirect_to edit_user_registration_path(@user)
+    else
+      render :edit
+    end
   end
 
   def show
@@ -34,7 +51,7 @@ class DollsController < ApplicationController
     @doll = Doll.find(params[:id])
   end
 
-  def doll_params
-    params.require(:doll).permit(:name, :description, :price)
+  def params_doll
+    params.require(:doll).permit(:name, :description, :price, :user_id, :photo_cache, :photo )
   end
 end

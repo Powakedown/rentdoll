@@ -24,25 +24,40 @@
     <div class="col-xs-12 col-sm-6">
       <div class="card-profile card-profile-activity">
         <div class="buttons">
-          <%= link_to new_doll_path(@user) do %>
+          <%= link_to new_user_doll_path(@user) do %>
             <i class="fa fa-plus"></i>
             <span>Ajouter une doll en location</span>
           <% end %>
         </div>
-        <h5>Vous avez  <%= @user.dolls.count %> dolls en location:</h5>
+
+        <h5>Vous avez <strong><%= @user.dolls.count %></strong> doll<%= "s" if @user.dolls.count>1 %> en location:</h5>
+
         <ul class="list-group">
           <% @user.dolls.each do |dolie| %>
             <% if dolie.persisted? %>
-              <li class="list-group-item profil-doll-image" style="background-image: linear-gradient(-225deg, rgba(50,0,20,0.2) 0%, rgba(50,0,20,0.2) 50%), url('<%= image_path dolie.photo %>')"">
+              <% if dolie.photo?%>
+                <li class="list-group-item profil-doll-image" style="background-image: linear-gradient(-225deg, rgba(50,0,20,0.2) 0%, rgba(50,0,20,0.2) 50%), url('<%= cl_image_path dolie.photo.path %>')">
+              <% else %>
+                <li class="list-group-item profil-doll-image" style="background-image: linear-gradient(-225deg, rgba(50,0,20,0.2) 0%, rgba(50,0,20,0.2) 50%), url('http://res.cloudinary.com/doodlid/image/upload/e_blur:1337/v1502810434/doll8_msmtic.jpg')">
+              <% end %>
                   <div class="profil-doll">
                     <div class="">
                      <h3><%= dolie.name %></h3>
                       <%= link_to doll_path(dolie), method: :delete do %>
                         <i class="fa fa-trash align-right"></i>
                       <% end %>
+                      <%= link_to edit_doll_path(dolie) do %>
+                        <i class="fa fa-pencil align-right"></i>
+                      <% end %>
+                      <% unless dolie.photo %>
+                      <%= link_to "Ajouter l'image manquante", edit_doll_path(dolie), class: "btn btn-pink" %>
+                      <% end %>
                     </div>
                     <div class="">
                       <%= dolie.description %>
+                    </div>
+                    <div class="">
+                      <h4><%= dolie.price %>€</h4>
                     </div>
                   </div>
               </li>

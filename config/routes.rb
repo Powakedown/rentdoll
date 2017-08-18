@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   root to: 'dolls#index'
+  mount Attachinary::Engine => "/attachinary"
 
   devise_for :users,
     controllers: { registrations: 'users/registrations', omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  resources :dolls do
-    resources :bookings, only: [:new, :create, :edit, :update, :show]
+  resources :users do
+    resources :dolls, shallow: true do
+        resources :bookings, shallow: true
+    end
   end
-
 
 
 end

@@ -1,11 +1,30 @@
 <% provide(:title, "Rentdoll") %>
 <div class="container">
   <div class="row">
+    <div class="col-md-12">
+
+      <div class="title">
+      <span>RentDoll</span>
+      </div>
+      <div class="slogan">
+        <p> Keep calm<br>and Love a doll.</p>
+      </div>
+      <div class="fake-input">
+        <input placeholder="Où ?" />
+          <button class="btn btn-pink"type="button" id="button-search">
+                <span> Rechercher</span>
+          </button>
+      </div>
+    </div>
     <% @dolls.each do |doll| %>
       <div class="col-xs-12 col-md-3 col-sm-4 text-center" >
         <div class="card-index">
           <%= link_to doll_path(doll) do %>
-          <div class="card-index-image" style="background-image: url('<%= image_path doll.photo %>')">
+            <% if doll.photo? %>
+              <div class="card-index-image" style="background-image: url('<%= cl_image_path doll.photo.path %>')">
+            <% else %>
+              <div class="card-index-image" style="background-image: url('http://res.cloudinary.com/doodlid/image/upload/e_blur:1337/v1502810434/doll8_msmtic.jpg')">
+            <% end %>
           </div>
           <% end %>
           <div class="card-body text-center"><p><%= link_to doll.name, doll_path(doll) %> - <%= doll.price %> €</p>

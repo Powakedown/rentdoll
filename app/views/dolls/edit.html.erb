@@ -1,5 +1,28 @@
 <% provide(:title, "Éditer la fiche de la doll") %>
-") %>
 
-<h1>Dolls#edit</h1>
-<p>Find me in app/views/dolls/edit.html.erb</p>
+<div class="container text-center">
+  <div class="content-medium">
+  <h1>Décrivez <%= @doll.name %></h1>
+
+  <%= simple_form_for @doll do |f| %>
+    <div class="form-group">
+      <%= f.input :name, label: 'Son nom', :label_html => { :class => 'form-control-label' }, :input_html => { :class => 'form-control' }, error: 'Le nom est obligatoire, please specify one' %>
+    </div>
+    <div class="form-group">
+      <%= f.input :description, label: 'Sa description', :label_html => { :class => 'form-control-label' }, :input_html => { :class => 'form-control' } %>
+    </div>
+    <div class="form-group">
+      <%= f.input :price, label: 'Prix de la location', :label_html => { :class => 'form-control-label' }, :input_html => { :class => 'form-control' }, error: 'Le nom est obligatoire, please specify one' %>
+    </div>
+    <div class="form-group">
+
+      <label class="custom-file">
+        <%= f.input :photo, label: 'Charger une photo', as: :attachinary, :label_html => { :class => 'form-control-label' }, :input_html => { :class => 'custom-file-input' } %>
+        <span class="custom-file-control"></span>
+      </label>
+
+    </div>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+ <% end %>
+  </div>
+</div>
