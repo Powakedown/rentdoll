@@ -3,18 +3,22 @@
   <div class="row">
     <div class="col-md-12">
 
-      <div class="title">
-      <span>RentDoll</span>
-      </div>
-      <div class="slogan">
-        <p> Keep calm<br>and Love a doll.</p>
-      </div>
+    <div class="title">
+    <span>RentDoll</span>
+    </div>
+    <div class="slogan">
+      <p> Keep calm<br>and Love a doll.</p>
+    </div>
+
+    <div class="custom-search-input">
       <div class="fake-input">
-        <input placeholder="Où ?" />
-          <button class="btn btn-pink"type="button" id="button-search">
-                <span> Rechercher</span>
-          </button>
+        <%= simple_form_for :query, url: dolls_path, method: :get do |f| %>
+           <%= f.input :address, label: " ", placeholder: 'Où', :label_html => { :class => 'search-field' } %>
+         <span><%= f.button :submit, class: 'btn btn-pink', id: "button-search", value: "Rechercher" %></span>
+        <% end %>
       </div>
+    </div>
+
     </div>
     <% @dolls.each do |doll| %>
       <div class="col-xs-12 col-md-3 col-sm-4 text-center" >

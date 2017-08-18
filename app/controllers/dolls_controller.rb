@@ -3,16 +3,19 @@ class DollsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
-    @dolls = Doll.all
+    if params[:query]
+      @dolls = Doll.where(address: params[:query][:address])
+    else
+      @dolls = Doll.all
+    end
   end
 
   def new
-    @user = User.find(params[:user_id])
-    @doll = Doll.new
+    @doll = current_user.dolls.new
   end
 
   def create
-    @user = User.find(params[:user_id])
+    @user = current_user
     @doll = Doll.new(params_doll)
     @doll.user = @user
     if @doll.save

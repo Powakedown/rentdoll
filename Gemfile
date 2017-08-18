@@ -19,6 +19,7 @@ gem 'tzinfo-data'
 gem 'omniauth-facebook'
 
 gem 'devise'
+gem "geocoder"
 
 gem 'cloudinary', '1.1.7'
 gem 'attachinary', github: 'assembler/attachinary'
