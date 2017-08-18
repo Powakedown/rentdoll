@@ -1,0 +1,34 @@
+.message {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 5px #B3B3B3;
+  background-color: #A4EAA1;
+  border: 2px solid #67ED5C;
+}
+
+.message-body {
+  flex-grow: 1;
+}
+.message-name {
+  margin: 0 auto;
+  font-weight: bold;
+  font-size:18px;
+  // margin: 0px;
+}
+.message-name h3{
+  margin: 0;
+}
+.message-body {
+  // padding-left: 10px;
+  font-size: 16px;
+  color: rgba(0,0,0,0.7);
+  margin: 0 auto;
+}
+.message-body p{
+  margin: 0;
+}
+.message-status {
+  font-size: 30px;
+}
+
