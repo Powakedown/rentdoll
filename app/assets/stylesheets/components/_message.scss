@@ -2,9 +2,10 @@
   display: flex;
   align-items: center;
   padding: 20px;
-  box-shadow: 0 0 5px #B3B3B3;
-  background-color: #A4EAA1;
-  border: 2px solid #67ED5C;
+  background-color: $pink;
+  // border: 1px solid $pink;
+  margin-top: 10px;
+  border-radius: 4px;
 }
 
 .message-body {
@@ -14,6 +15,7 @@
   margin: 0 auto;
   font-weight: bold;
   font-size:18px;
+  color: white;
   // margin: 0px;
 }
 .message-name h3{
@@ -24,6 +26,7 @@
   font-size: 16px;
   color: rgba(0,0,0,0.7);
   margin: 0 auto;
+  color: white;
 }
 .message-body p{
   margin: 0;
