@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 20170818122015) do
 
   create_table "dolls", force: :cascade do |t|
     t.string "name"
-    t.string "description"
-    t.string "price"
+    t.text "description"
+    t.integer "price"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

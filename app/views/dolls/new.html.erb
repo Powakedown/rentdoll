@@ -15,15 +15,20 @@
       <div class="form-group-reduced">
         <%= f.input :price, label: 'Prix de la location', :label_html => { :class => 'doll-name' }, :input_html => { :class => 'form-control' }, error: 'Veuillez indiquer un prix' %>
       </div>
-      <div class="form-group">
 
-      <label class="custom-file">
-        <%= f.input :photo, label: 'Charger une photo', as: :attachinary, :label_html => { :class => 'form-control-label' }, :input_html => { :class => 'custom-file-input' } %>
-        <span class="custom-file-control"></span>
-      </label>
+      <span id="label-photo">Photo de la doll</span>
+      <div class="form-group-photo">
+        <label class="custom-file-photo">
+          <%= f.input :photo, as: :attachinary, :label_html => { :class => 'doll-name' }, :input_html => { :class => 'custom-file-input' } %>
+
+          <span class="custom-file"></span>
+
+        </label>
 
       </div>
-      <%= f.button :submit, class: 'btn btn-primary' %>
+
+      </div>
+      <%= f.button :submit, class: 'btn btn-booking' %>
    <% end %>
     </div>
   </div>

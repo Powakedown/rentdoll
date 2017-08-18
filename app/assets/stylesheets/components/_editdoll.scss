@@ -20,3 +20,35 @@ h1{
 .form-group-reduced{
   max-width: 251px;
 }
+
+.form-group-photo{
+  border: 2px solid rgb(200,200,200);
+  border-style: dashed;
+  height: 140px;
+  text-align: center;
+  display: block;
+  li{
+  margin-top: 10px;
+  list-style: none;
+  }
+}
+
+#button-choose-file{
+  border: none;
+}
+
+.control-label.attachinary.optional.doll-name{
+display: none;
+}
+
+#label-photo{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+.custom-file-photo{
+ margin-top: 10px;
+  // float: left;
+}
+

@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     if @booking.save
       flash[:notice] = "Vous avez réservé avec succés #{@doll.name} pour le #{@booking.book_at}."
-      render 'dolls/show'
+      redirect_to edit_user_registration_path
     else
       render 'dolls/show'
     end

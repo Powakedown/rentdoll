@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount Attachinary::Engine => "/attachinary"
 
   devise_for :users,
-    controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+    controllers: { registrations: 'users/registrations', omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :dolls, shallow: true do
       resources :bookings, shallow: true
