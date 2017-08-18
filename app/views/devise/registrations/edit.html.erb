@@ -36,7 +36,7 @@
           <% @user.dolls.each do |dolie| %>
             <% if dolie.persisted? %>
               <% if dolie.photo?%>
-                <li class="list-group-item profil-doll-image" style="background-image: linear-gradient(-225deg, rgba(50,0,20,0.2) 0%, rgba(50,0,20,0.2) 50%), url('<%= cl_image_tag dolie.photo %>')">
+                <li class="list-group-item profil-doll-image" style="background-image: linear-gradient(-225deg, rgba(50,0,20,0.2) 0%, rgba(50,0,20,0.2) 50%), url('<%= cl_image_path dolie.photo.path %>')">
               <% else %>
                 <li class="list-group-item profil-doll-image" style="background-image: linear-gradient(-225deg, rgba(50,0,20,0.2) 0%, rgba(50,0,20,0.2) 50%), url('http://res.cloudinary.com/doodlid/image/upload/e_blur:1337/v1502810434/doll8_msmtic.jpg')">
               <% end %>
@@ -48,6 +48,9 @@
                       <% end %>
                       <%= link_to edit_doll_path(dolie) do %>
                         <i class="fa fa-pencil align-right"></i>
+                      <% end %>
+                      <% unless dolie.photo %>
+                      <%= link_to "Ajouter l'image manquante", edit_doll_path(dolie), class: "btn btn-pink" %>
                       <% end %>
                     </div>
                     <div class="">
